@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+	<link rel="icon" href="url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAGoklEQVR4nO2ZCWwVRRjHF0O8iCYeiUZjNEICAWYrlBsDUYmKKMYEJGgUDWAUUEFuohQoCTTQEoUAb+a1pZRaoHJUWtpytFAKhXLUtpRLkNJwtdxHgUK/+Zt5r9vdfXcNtC+RL5nk5e3s2/9v57tmnqY9tIcW3hbpwJMsHq+roS9HKy2cTV+OVroDbzKOsTqnFF3QYcapThcSaqjPTFCxzml2+0S8qIWLdXCgNRO01io26OB0m3Ga2TcKLZtVfEcBnXG6EkBoXWQ8XYl0qjlEPq5vb+vEU80iXr09ndMhUxDJXsvo0ser6cI3GVQ3ebPErG0S03Mlpm6WGJstMXStRM9EuuUBsan9ajza5AARTgwwRHSOp3vzd0kkFEs49kksKpJYUCgRUyAxe7sJMT5H4oeNEh+mKuHSshr4pckBdE7CEDAmWyK1TCK5xDfEjDw3wMQcDwjREOA3I5bg5SYFYJzKDQGL9wJ/HIINYvxmibdWSETG2/2+S7xEn2SJASsluidaITC5qQGqjYenlQPpR+wQ3SziQhu0v6kBGtJmzE5g4GqJabkmxKA1prjIBImuCRKdnAEBoGLh1UQ83iQAvkREON2roSB+L3XHweK9ZkzEFUpMz5MYtVGiV5JfkMOMo0ezACi/zjjm7U6egf3Vn/b7Ij3ihAm6yzhGPzDxbDGe0bm9MI3IkMg6Dmw6DmQGgIjOd6+UXn/fR6vcGWrIGm8XY4JiNaBFSKK6JeNpxmk5E3SBcTrDOOXovC5KNWI+CtiWBrcREnN2AjsrgfwKIPdkYAi1Ssa976TYi92oTInenq7FaWFQ8W1+xWM6pxI/7YBknLI6OtBOzdUFLTKuveGU+K0I2H8W2HM6OMTcAnu8ROV5FztVsfut8FgJjokBASI4Pgkhzd3QOcVZv1Nv/mAV8Ne50CC+SDfvHboucMXul2JzpXsRAr39+7SgWGNy3B6JI5eAdUfhqrCdPQLMGKOzJY5dBA5fCA1iTTnQ1VIb5hQEbjvG5Uj0sbgTE3TMb8/EHBhlTByyVuJGLXC9Frh6B9h3FnjPUvZdvrtCuoSfuAz8HSLEwiI03K8qdLKftsMKMXqj/QV2FBjjE6BdEp5jgmqMiYWnYYMoOguXvxvX1x8FKq8CFVdCh5iWZwJ8vcG7d/oy3S32s3V2iMFp9hrhNyvpghzGxJ+3SdTctUPE7JLokiAxd5fEuRvAmeuNgxidZQqZstU7O0UmmDXBuhKTNtlXob1AG98ADnQ3JvVfKXH7HrwgLt8GLt4CqmvQaIjhGaaI2Tu8U+yIDDfEsHRvd7JmJebAQJ8APWLxhDFJ9S136nBfIUZkmiJU75QZQsU2IN62AKh9iO9A5uhhTPpglcRdgg1iXqEbLKZQ/ieI73NMETPzg1fsRfUQP2bbW4xIB54PGgMz8iXuERogLt0COsWblbfoTONXImq7GcQ/bZZBK7aCiNst0WuZragu8ym+vcCz1ix04DxQR2iASDtsPtzIIlca6U7OYvM3VKudH0Lb8fl629uvUtnSn/uMtFZIkkCdGgTknQJ6Wt9C/UgoaVxM7KgwAZQrbjsZvHfqYXluBMenPsXXu0+0MTG6QKKkClhRBgzb4NUX3TY+q9SWe6pxEP0tBXHp/uC908gNqNYF3WGcFvsV71oBJ/oE64UYpwrmANMF7TO+U2+oMRAqtqxxsMdHxVb7a1UnkkpxJrUMrbWQDGihzmd8CndtLmip4X+dnHhJ51RpXFfFbVmI7lRQCfRMcnexzmJ7ndh+EpiwxdwrdEukTK0x5urzBUWr0wYm6CATlKRzfNtR4AUfK9ZWF3TKCjoyU6KsOjhE6Xlg92l7il1Z7t5Te7jrau1BWocEvKJOEqwPVal23BaJ3Ao3QCB3Kq8CUsrcLba1z6p31yy/Ged+mmsjJGiBr3PPvskSo7Il5u+WEMUunwY/AETvcK9WTx+ZjQl17IgpWhQe0ZrS0o5ihhIVLBH4H0TKZSKW4DWtOay2DsNVxS6tBmbtsPcuATOboH8Yp3me++4mNcYx6P1UKss6YfZOqvlTtURV8Ng9EhO22kTfZBxDjT12sxvjdE0JUz7t2QAaXazyf0t22aSFk+kWl7A2gAZE1U2gXwpJcx6+08LJdE61hjgl2gqh6oF1H6BzOq/On7RwMp3T3ob+5gBQUwtUXgNWHgLeTfU4X3JisBZuxgQmhZYqMVULR+vrbkG2BUiVVSpTaeFsfaPQ0rUSnPaqasoEnVXZRp3jhP0f3A/t/2z/Amrur17WUnv2AAAAAElFTkSuQmCC)" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>年的小天地</title>
+    <!-- FontAwesome 圖標 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts 字型 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Quicksand:wght@500;600&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #355c7d;
+            --primary-light: #7cb3f2;
+            --card-bg: rgba(255, 255, 255, 0.1);
+            --card-border: rgba(103, 139, 203, 0.6);
+            --text-main: #2b4c6f;
+            --text-sub: #0b5394;
+            --badge-bg: rgba(74, 144, 226, 0.12);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Zen Maru Gothic', 'Noto Sans TC', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(rgba(238, 246, 252, 0.85), rgba(216, 233, 248, 0.85)), 
+                        url('下載.webp') no-repeat center center fixed;
+            background-size: cover;
+            color: var(--text-main);
+            min-height: 100vh;
+            padding: 20px;
+            background-attachment: fixed;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px 0 20px;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            color: #204060;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            text-shadow: 0 2px 8px rgba(180, 215, 245, 0.8);
+        }
+
+        header p {
+            color: var(--text-sub);
+            font-size: 0.95rem;
+        }
+
+        /* 導覽頁籤 */
+        .tabs {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0 30px;
+        }
+
+        .tab-btn {
+            background: rgba(255, 255, 255, 0.85);
+            border: 1px solid var(--card-border);
+            color: var(--text-main);
+            padding: 12px 28px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 4px 12px rgba(140, 185, 225, 0.2);
+        }
+
+        .tab-btn i { margin-right: 8px; color: var(--primary); }
+
+        .tab-btn.active, .tab-btn:hover {
+            background: linear-gradient(135deg, #5b9ee9, #3a7bd5);
+            color: #fff;
+            border-color: transparent;
+            box-shadow: 0 6px 20px rgba(74, 144, 226, 0.35);
+            transform: translateY(-2px);
+        }
+
+        .tab-btn.active i { color: #fff; }
+
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+
+        /* 篩選面板 */
+        .filter-panel {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 22px;
+            margin-bottom: 25px;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 8px 24px rgba(130, 175, 215, 0.22);
+        }
+
+        .search-box-row {
+            position: relative;
+            margin-bottom: 15px;
+        }
+
+        .search-box-row i {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--primary);
+        }
+
+        .search-box-row input {
+            width: 100%;
+            padding: 12px 15px 12px 48px;
+            background: rgba(255, 255, 255, 0.95);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            color: var(--text-main);
+            font-size: 0.95rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .search-box-row input:focus { border-color: var(--primary); }
+
+        /* 存單搜尋與排序並排 */
+        .deposit-controls-row {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .deposit-controls-row .search-box-row {
+            flex: 1;
+            min-width: 220px;
+            margin-bottom: 0;
+        }
+
+        .deposit-sort-box {
+            min-width: 200px;
+        }
+
+        .deposit-sort-box select {
+            width: 100%;
+            padding: 12px 15px;
+            background: rgba(255, 255, 255, 0.95);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            color: var(--text-main);
+            font-size: 0.95rem;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .filter-groups {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .filter-group label {
+            display: block;
+            font-size: 0.85rem;
+            color: var(--text-sub);
+            margin-bottom: 6px;
+            font-weight: 500;
+        }
+
+        .filter-group select {
+            width: 100%;
+            padding: 10px 12px;
+            background: rgba(255, 255, 255, 0.95);
+            border: 1px solid var(--card-border);
+            border-radius: 10px;
+            color: var(--text-main);
+            outline: none;
+            cursor: pointer;
+        }
+
+        .filter-footer-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 5px;
+        }
+
+        .song-count-badge {
+            font-weight: 600;
+            color: var(--primary);
+            background: rgba(74, 144, 226, 0.1);
+            padding: 8px 15px;
+            border-radius: 10px;
+            border: 1px solid rgba(74, 144, 226, 0.2);
+            font-size: 0.95rem;
+        }
+
+        .btn-primary-custom {
+            background: linear-gradient(135deg, #4a90e2, #357abd);
+            border: none;
+            color: #fff;
+            padding: 11px 22px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s;
+            box-shadow: 0 4px 12px rgba(74, 144, 226, 0.25);
+        }
+
+        .btn-primary-custom:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 16px rgba(74, 144, 226, 0.35);
+        }
+
+        /* 隨機選歌彈窗 */
+        #randomResultModal {
+            display: none;
+            background: rgba(255, 255, 255, 0.95);
+            border: 2px solid var(--primary-light);
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 25px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(100, 160, 220, 0.3);
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* 歌單網格卡片 */
+        .song-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 18px;
+        }
+
+        .song-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 18px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 6px 18px rgba(140, 185, 225, 0.15);
+        }
+
+        .song-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 25px rgba(74, 144, 226, 0.28);
+        }
+
+        .song-info-top {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin-bottom: 14px;
+        }
+
+        .song-title {
+            font-size: 1.18rem;
+            font-weight: 700;
+            color: #1a365d;
+            line-height: 1.35;
+        }
+
+        .song-artist {
+            color: var(--text-sub);
+            font-size: 0.92rem;
+        }
+
+        .song-stroke {
+            color: #5c7f9d;
+            font-size: 0.82rem;
+        }
+
+        .song-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px;
+            border-top: 1px dashed rgba(162, 206, 248, 0.6);
+            padding-top: 10px;
+        }
+
+        .badges {
+            display: flex;
+            gap: 5px;
+            flex-wrap: wrap;
+            flex: 1;
+        }
+
+        .badge {
+            font-size: 0.72rem;
+            padding: 2px 8px;
+            border-radius: 12px;
+            background: var(--badge-bg);
+            color: var(--primary);
+            border: 1px solid rgba(74, 144, 226, 0.2);
+            font-weight: 500;
+        }
+
+        .vip-badge {
+            font-size: 0.72rem;
+            padding: 2px 8px;
+            border-radius: 10px;
+            background: #fff3cd;
+            color: #b7791f;
+            border: 1px solid #f6e05e;
+            margin-left: 6px;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .copy-btn {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid var(--card-border);
+            color: var(--primary);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            font-weight: 600;
+            white-space: nowrap;
+            flex-shrink: 0;
+            transition: all 0.2s;
+        }
+
+        .copy-btn:hover {
+            background: var(--primary);
+            color: #fff;
+        }
+
+        /* 存單提醒樣式（置中、放大、醒目藍色系框框） */
+        .deposit-notice {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(74, 144, 226, 0.4);
+            border-left: 6px solid var(--primary);
+            padding: 16px 22px;
+            border-radius: 14px;
+            margin-bottom: 22px;
+            font-size: 1.05rem;
+            font-weight: 500;
+            color: var(--text-main);
+            text-align: center;
+            box-shadow: 0 6px 20px rgba(140, 185, 225, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .deposit-notice i {
+            color: var(--primary);
+            margin-right: 6px;
+        }
+
+        /* 存單表格樣式 */
+        .table-responsive {
+            overflow-x: auto;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 18px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 24px rgba(130, 175, 215, 0.18);
+        }
+
+        table { width: 100%; border-collapse: collapse; text-align: left; }
+        th, td { padding: 16px 20px; border-bottom: 1px solid rgba(162, 206, 248, 0.35); }
+        th { background: rgba(220, 238, 252, 0.85); color: #1e3a5f; font-weight: 700; }
+        tr:hover { background: rgba(255, 255, 255, 0.5); }
+        .highlight-num { font-weight: 700; color: #2b70c9; }
+        .total-num { font-weight: 700; color: #008080; }
+        .no-data, .loading { text-align: center; padding: 40px; color: var(--text-sub); grid-column: 1 / -1; }
+
+        @media (max-width: 600px) {
+            header h1 { font-size: 1.75rem; }
+            .tabs { flex-direction: column; }
+            .tab-btn { width: 100%; }
+            .deposit-sort-box { width: 100%; }
+        }
+
+        /* 手機版排版優化：針對寬度小於 600px 的手機螢幕 */
+        @media screen and (max-width: 600px) {
+          /* 1. 讓上方功能按鈕與排序區塊變成垂直排列，並佔滿寬度 */
+          .tabs {
+            flex-direction: column;
+            gap: 8px;
+          }
+          .tab-btn, .deposit-sort-box, select, input {
+            width: 100% !important;
+            box-sizing: border-box;
+          }
+
+          /* 2. 調整表格的內距，避免手機上左右空間被吃光 */
+          table th, table td {
+            padding: 10px 8px; /* 縮小儲存格邊距 */
+            font-size: 0.9rem;  /* 手機上表格文字稍微縮小，才塞得下 */
+          }
+
+          /* 3. 如果有些比較次要的欄位（例如備註、日期等），在手機上想隱藏可以加這行 */
+          /* .hide-on-mobile { display: none; } */
+        }
+
+        /* 表格外層容器：開啟手機橫向滑動功能 */
+        .table-container {
+          width: 100%;
+          overflow-x: auto;   /* 允許內容超出時左右滾動 */
+          -webkit-overflow-scrolling: touch; /* 讓手機滑動時更流暢（iPhone 慣性滑動） */
+          margin-bottom: 15px;
+        }
+
+        /* 確保表格本身在手機上不會被強制壓扁，維持原本該有的寬度 */
+        .table-container table {
+          width: 100%;
+          white-space: nowrap; /* 讓文字不要自動折行，保持整齊 */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>˚₊‧ꕤ\年的小天地/ꕤ‧₊˚</h1>
+        </header>
+
+        <!-- 頁籤按鈕 -->
+        <div class="tabs">
+            <button class="tab-btn active" onclick="switchTab('songs', event)"><i class="fa-solid fa-headphones"></i> 歌單列表</button>
+            <button class="tab-btn" onclick="switchTab('deposits', event)"><i class="fa-solid fa-gem"></i> 存鑽存歌</button>
+        </div>
+
+        <!-- 【分頁一】歌單列表 -->
+        <div id="songs" class="tab-content active">
+            <div class="deposit-notice">
+                <p>隨時更新，不在歌單中也歡迎詢問(*/ω＼*)</p>
+            </div>
+			
+            <div class="filter-panel">
+                <div class="search-box-row">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="songSearch" placeholder="搜尋歌名、原唱..." oninput="filterSongs()">
+                </div>
+                
+                <div class="filter-groups">
+                    <div class="filter-group">
+                        <label>語言</label>
+                        <select id="langFilter" onchange="filterSongs()">
+                            <option value="">全部語言</option>
+                            <option value="中文">中文</option>
+                            <option value="台語">台語</option>
+                            <option value="英文">英文</option>
+                            <option value="日文">日文</option>
+                            <option value="韓文">韓文</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>歌手類別</label>
+                        <select id="genderFilter" onchange="filterSongs()">
+                            <option value="">全部類別</option>
+                            <option value="男歌手">男歌手</option>
+                            <option value="女歌手">女歌手</option>
+                            <option value="合唱/團體">合唱/團體</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>音樂風格</label>
+                        <select id="styleFilter" onchange="filterSongs()">
+                            <option value="">全部風格</option>
+							<option value="新練的">新練的</option>
+							<option value="冠歌">冠歌</option>
+							<option value="古風">古風</option>
+                            <option value="抒情">抒情</option>
+							<option value="歪歌">歪歌</option>
+							<option value="甜歌">甜歌</option>
+							<option value="高音">高音</option>
+                            <option value="輕快">輕快</option>
+                            <option value="搖滾">搖滾</option>
+							<option value="饒舌">饒舌</option>
+							<option value="動漫">動漫</option>
+							<option value="高爆">高爆</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>排序方式</label>
+                        <select id="songSort" onchange="filterSongs()">
+                            <option value="default">預設順序</option>
+                            <option value="strokeAsc">依字部（少到多）</option>
+                            <option value="lang">依語言排序（中/臺/英/日/韓）</option>
+                            <option value="gender">依歌手類別排序（男/女/合唱）</option>
+                            <option value="style">依風格排序</option>
+                            <option value="title">依歌名筆畫排序</option>
+                            <option value="artist">依原唱筆畫排序</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="filter-footer-bar">
+                    <button class="btn-primary-custom" onclick="pickRandomSong()">
+                        <i class="fa-solid fa-dice"></i> 隨機選歌 (從目前篩選結果)
+                    </button>
+                    <div class="song-count-badge" id="songCountText">0首/0首</div>
+                </div>
+            </div>
+
+            <!-- 隨機選歌彈窗 -->
+            <div id="randomResultModal">
+                <p style="color: var(--text-sub); font-size: 0.85rem; margin-bottom: 5px;">你抽中了...</p>
+                <h2 id="randomSongTitle" style="color: #1a365d; font-size: 1.5rem; margin-bottom: 5px;">-</h2>
+                <p id="randomSongArtist" style="color: var(--primary); font-size: 1.05rem; margin-bottom: 15px;">-</p>
+                <button class="btn-primary-custom" id="randomCopyBtn" onclick=""><i class="fa-solid fa-copy"></i> 複製「歌手-歌名」</button>
+            </div>
+
+            <div class="song-grid" id="songGrid">
+                <div class="loading"><i class="fa-solid fa-spinner fa-spin"></i> 全速讀取資料ε≡ﾍ( ´∀`)ﾉ</div>
+            </div>
+        </div>
+
+        <!-- 【分頁二】存鑽存歌 -->
+        <div id="deposits" class="tab-content">
+            <div class="deposit-notice">
+                <i class="fa-solid fa-circle-info"></i> 三個月內至少要更新(增加或減少)，否則我會吃掉！( •̀ ω •́ )✧
+            </div>
+            
+            <div class="filter-panel">
+                <div class="deposit-controls-row">
+                    <div class="search-box-row">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" id="userSearch" placeholder="搜尋老闆名稱..." oninput="filterDeposits()">
+                    </div>
+                    <div class="deposit-sort-box">
+                        <select id="depositSort" onchange="filterDeposits()">
+                            <option value="default">排序：預設順序</option>
+                            <option value="name">排序：名稱筆畫（少到多）</option>
+                            <option value="diamondDesc">排序：存鑽（多到少）</option>
+                            <option value="songsDesc">排序：存歌（多到少）</option>
+                            <option value="totalDesc">排序：總數（多到少）</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>老闆名稱</th>
+                            <th>存鑽</th>
+                            <th>存歌</th>
+                            <th>總數</th>
+                            <th>最後更新日期</th>
+                        </tr>
+                    </thead>
+                    <tbody id="depositTable">
+                        <tr><td colspan="5" class="loading"><i class="fa-solid fa-spinner fa-spin"></i> 全速讀取資料ε≡ﾍ( ´∀`)ﾉ</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_URL = 'https://script.google.com/macros/s/AKfycbxp-SooaagCmG61BU93IkENOYeOBGaru3L-N43kuSZDLxHR5hzQMR7JeOqiw8Wv0HGL/exec';
+
+        let songData = [];
+        let depositData = [];
+
+        const strokeCollator = new Intl.Collator('zh-Hant-TW-u-co-stroke', { sensitivity: 'base', numeric: true });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            fetchData();
+        });
+
+        async function fetchData() {
+            try {
+                const response = await fetch(API_URL);
+                if (!response.ok) {
+                    throw new Error(`HTTP 錯誤狀態碼: ${response.status}`);
+                }
+                const result = await response.json();
+                songData = result.songs || [];
+                depositData = result.deposits || [];
+                filterSongs();
+                filterDeposits();
+            } catch (error) {
+                console.error('資料載入失敗：', error);
+                document.getElementById('songGrid').innerHTML = `<div class="no-data">無法取得試算表資料，請確認 Apps Script 是否已重新部署為「新版本」且權限為「所有人」！<br><small style="color:#888;">(${error.message})</small></div>`;
+                document.getElementById('depositTable').innerHTML = `<tr><td colspan="5" class="no-data">無法讀取存單資料，請確認 Apps Script 部署狀態</td></tr>`;
+            }
+        }
+
+        // 切換分頁
+        function switchTab(tabId, event) {
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+            
+            event.currentTarget.classList.add('active');
+            document.getElementById(tabId).classList.add('active');
+        }
+
+        // 協助比較字串（空白值自動排到最後面）
+        function compareWithEmptyLast(valA, valB) {
+            const strA = (valA || '').toString().trim();
+            const strB = (valB || '').toString().trim();
+            if (!strA && !strB) return 0;
+            if (!strA) return 1;
+            if (!strB) return -1;
+            return strokeCollator.compare(strA, strB);
+        }
+
+        // 協助比較字部數字（少到多，空白或非數字自動排到最後面）
+        function compareStrokeNumberAsc(valA, valB) {
+            const strA = (valA || '').toString().trim();
+            const strB = (valB || '').toString().trim();
+            const numA = strA !== '' && !isNaN(Number(strA)) ? Number(strA) : Infinity;
+            const numB = strB !== '' && !isNaN(Number(strB)) ? Number(strB) : Infinity;
+            return numA - numB;
+        }
+
+        // 取得篩選並排序後的歌單
+        function getFilteredSongs() {
+            const query = document.getElementById('songSearch').value.toLowerCase();
+            const lang = document.getElementById('langFilter').value;
+            const gender = document.getElementById('genderFilter').value;
+            const style = document.getElementById('styleFilter').value;
+            const sortBy = document.getElementById('songSort').value;
+
+            const filtered = songData.filter(song => {
+                const title = (song.title || '').toLowerCase();
+                const artist = (song.artist || '').toLowerCase();
+                
+                const matchQuery = title.includes(query) || artist.includes(query);
+                const matchLang = !lang || (song.lang || '').includes(lang);
+                const matchGender = !gender || (song.gender || '').includes(gender);
+                const matchStyle = !style || (song.style || '').includes(style);
+
+                return matchQuery && matchLang && matchGender && matchStyle;
+            });
+
+            if (sortBy === 'default') {
+                return filtered;
+            }
+
+            return [...filtered].sort((a, b) => {
+                if (sortBy === 'strokeAsc') {
+                    return compareStrokeNumberAsc(a.stroke, b.stroke) || compareWithEmptyLast(a.title, b.title);
+                }
+                if (sortBy === 'lang') {
+                    return compareWithEmptyLast(a.lang, b.lang) || compareWithEmptyLast(a.title, b.title);
+                }
+                if (sortBy === 'gender') {
+                    return compareWithEmptyLast(a.gender, b.gender) || compareWithEmptyLast(a.artist, b.artist);
+                }
+                if (sortBy === 'style') {
+                    return compareWithEmptyLast(a.style, b.style) || compareWithEmptyLast(a.title, b.title);
+                }
+                if (sortBy === 'title') {
+                    return compareWithEmptyLast(a.title, b.title);
+                }
+                if (sortBy === 'artist') {
+                    return compareWithEmptyLast(a.artist, b.artist) || compareWithEmptyLast(a.title, b.title);
+                }
+                return 0;
+            });
+        }
+
+        // 渲染歌單並更新數量統計文字 (xx首/xx首)
+        function filterSongs() {
+            const filtered = getFilteredSongs();
+            const totalCount = songData.length;
+            const filteredCount = filtered.length;
+
+            document.getElementById('songCountText').innerText = `${filteredCount}首/${totalCount}首`;
+
+            const grid = document.getElementById('songGrid');
+            if (filteredCount === 0) {
+                grid.innerHTML = `<div class="no-data">查無符合條件的歌曲 🎵</div>`;
+                document.getElementById('randomResultModal').style.display = 'none';
+                return;
+            }
+
+            grid.innerHTML = filtered.map(song => {
+                const textToCopy = `${song.artist}-${song.title}`;
+                
+                let badgesHTML = '';
+                if (song.lang) badgesHTML += `<span class="badge">${song.lang}</span>`;
+                if (song.gender) badgesHTML += `<span class="badge">${song.gender}</span>`;
+                if (song.style) badgesHTML += `<span class="badge">${song.style}</span>`;
+
+                return `
+                    <div class="song-card">
+                        <div class="song-info-top">
+                            <div class="song-title">${song.title}</div>
+                            <div class="song-artist"><i class="fa-regular fa-user"></i> ${song.artist}</div>
+                            ${song.stroke ? `<div class="song-stroke">${song.stroke}字部</div>` : ''}
+                        </div>
+                        <div class="song-footer">
+                            <div class="badges">${badgesHTML}</div>
+                            <button class="copy-btn" onclick="copySongText('${textToCopy}', this)">
+                                <i class="fa-regular fa-copy"></i> 複製
+                            </button>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            document.getElementById('randomResultModal').style.display = 'none';
+        }
+
+        // 隨機選歌
+        function pickRandomSong() {
+            const currentFiltered = getFilteredSongs();
+            if (currentFiltered.length === 0) {
+                alert('目前條件下沒有可選的歌曲！');
+                return;
+            }
+
+            const randomIndex = Math.floor(Math.random() * currentFiltered.length);
+            const selected = currentFiltered[randomIndex];
+            const textToCopy = `${selected.artist}-${selected.title}`;
+
+            let infoParts = [];
+            if (selected.lang) infoParts.push(selected.lang);
+            if (selected.gender) infoParts.push(selected.gender);
+            if (selected.style) infoParts.push(selected.style);
+            let infoStr = infoParts.length > 0 ? ` (${infoParts.join(' / ')})` : '';
+
+            document.getElementById('randomSongTitle').innerText = selected.title;
+            document.getElementById('randomSongArtist').innerText = `原唱：${selected.artist}${infoStr}`;
+            
+            const copyBtn = document.getElementById('randomCopyBtn');
+            copyBtn.setAttribute('onclick', `copySongText('${textToCopy}', this, true)`);
+            
+            const modal = document.getElementById('randomResultModal');
+            modal.style.display = 'block';
+            modal.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // 一鍵複製
+        function copySongText(text, btnElement, isModal = false) {
+            navigator.clipboard.writeText(text).then(() => {
+                const originalHTML = btnElement.innerHTML;
+                btnElement.innerHTML = `<i class="fa-solid fa-check"></i> 已複製！`;
+                btnElement.style.background = '#48bb78';
+                btnElement.style.color = '#fff';
+                
+                setTimeout(() => {
+                    btnElement.innerHTML = originalHTML;
+                    btnElement.style.background = '';
+                    btnElement.style.color = '';
+                }, 1500);
+            }).catch(err => {
+                console.error('複製失敗', err);
+                alert('複製失敗，請手動複製：' + text);
+            });
+        }
+
+        // 計算存單數值與動態單價
+        function getDepositStats(d) {
+            const diamondVal = (d.diamond !== '-' && d.diamond !== '' && !isNaN(d.diamond)) ? Number(d.diamond) : 0;
+            const songsVal = (d.songs !== '-' && d.songs !== '' && !isNaN(d.songs)) ? Number(d.songs) : 0;
+            const rate = d.rate ? Number(d.rate) : 150;
+            const total = diamondVal + (songsVal * rate);
+            return { diamondVal, songsVal, total, rate };
+        }
+
+        // 渲染存單
+        function renderDeposits(deposits) {
+            const tbody = document.getElementById('depositTable');
+            if (deposits.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="5" class="no-data">查無老闆紀錄 💎</td></tr>`;
+                return;
+            }
+            tbody.innerHTML = deposits.map(d => {
+                const { total, rate } = getDepositStats(d);
+                const hasMemberTag = (d.memberType && d.memberType.trim() !== '') || rate === 100;
+                const badgeText = d.memberType && d.memberType.trim() !== '' ? d.memberType : 'VIP';
+
+                return `
+                    <tr>
+                        <td>
+                            <strong>${d.name}</strong>
+                            ${hasMemberTag ? `<span class="badge vip-badge">${badgeText}</span>` : ''}
+                        </td>
+                        <td class="highlight-num">${d.diamond !== '-' && d.diamond !== '' ? d.diamond + ' 鑽' : '-'}</td>
+                        <td>${d.songs !== '-' && d.songs !== '' ? d.songs + ' 首' : '-'}</td>
+                        <td class="total-num">${total > 0 ? total.toLocaleString() + ' 鑽' : '-'}</td>
+                        <td style="color: var(--text-sub);">${d.date}</td>
+                    </tr>
+                `;
+            }).join('');
+        }
+
+        // 搜尋與排序存單
+        function filterDeposits() {
+            const query = document.getElementById('userSearch').value.toLowerCase();
+            const sortBy = document.getElementById('depositSort').value;
+
+            let filtered = depositData.filter(d => (d.name || '').toLowerCase().includes(query));
+
+            if (sortBy !== 'default') {
+                filtered = [...filtered].sort((a, b) => {
+                    if (sortBy === 'name') {
+                        return compareWithEmptyLast(a.name, b.name);
+                    }
+                    const statsA = getDepositStats(a);
+                    const statsB = getDepositStats(b);
+
+                    if (sortBy === 'diamondDesc') {
+                        return statsB.diamondVal - statsA.diamondVal;
+                    }
+                    if (sortBy === 'songsDesc') {
+                        return statsB.songsVal - statsA.songsVal;
+                    }
+                    if (sortBy === 'totalDesc') {
+                        return statsB.total - statsA.total;
+                    }
+                    return 0;
+                });
+            }
+
+            renderDeposits(filtered);
+        }
+    </script>
+</body>
+</html>
